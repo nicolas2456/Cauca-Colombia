@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>.lw { font-size: 60px; }</style>
+        </head>
+        <body>
+            
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desafíos y oportunidades del Departamento del Cauca. Proyecto de desarrollo rural sostenible, inclusión y paz territorial.">
+  <meta name="keywords" content="Cauca, desarrollo rural, Colombia, problemática social, educación, sostenibilidad">
+  <meta name="author" content="Christian Camilo Solano Gómez">
+  <title>Cauca: Desafíos y Oportunidades | Desarrollo Rural Sostenible</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ==================== VARIABLES CSS ==================== */
+    :root {
+      --color-primary: #2563eb;
+      --color-secondary: #10b981;
+      --color-accent: #f59e0b;
+      --color-text: #1f2937;
+      --color-text-light: #6b7280;
+      --color-background: #ffffff;
+      --color-background-alt: #f9fafb;
+      --color-border: #e5e7eb;
+      
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Roboto', sans-serif;
+      
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --spacing-xl: 6rem;
+      
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+      
+      --border-radius: 0.5rem;
+      --transition: all 0.3s ease;
+    }
+    
+    /* ==================== RESET Y BASE ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      line-height: 1.6;
+      background-color: var(--color-background);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    /* ==================== TIPOGRAFÍA ==================== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--color-text);
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-md);
+      text-align: center;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    p {
+      font-size: 1rem;
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-text-light);
+    }
+    
+    /* ==================== UTILIDADES ==================== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+    
+    .section {
+      padding: var(--spacing-lg) 0;
+    }
+    
+    .section--alt {
+      background-color: var(--color-background-alt);
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: var(--border-radius);
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-family: var(--font-body);
+      font-size: 1rem;
+    }
+    
+    .btn--primary {
+      background-color: var(--color-primary);
+      color: white;
+    }
+    
+    .btn--primary:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn--secondary {
+      background-color: var(--color-secondary);
+      color: white;
+    }
+    
+    .btn--secondary:hover {
+      background-color: #059669;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ==================== HEADER / NAVEGACIÓN ==================== */
+    .header {
+      background-color: var(--color-background);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .nav__logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--color-primary);
+      font-weight: 800;
+    }
+    
+    .nav__menu {
+      display: flex;
+      gap: var(--spacing-md);
+      align-items: center;
+    }
+    
+    .nav__link {
+      color: var(--color-text);
+      font-weight: 500;
+      padding: var(--spacing-xs);
+      position: relative;
+    }
+    
+    .nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+    
+    .nav__link:hover::after {
+      width: 100%;
+    }
+    
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--color-text);
+    }
+    
+    /* ==================== HERO SECTION ==================== */
+    .hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+      color: white;
+      padding: var(--spacing-xl) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .hero__title {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: var(--spacing-md);
+      line-height: 1.1;
+    }
+    
+    .hero__subtitle {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: var(--spacing-md);
+      font-weight: 300;
+    }
+    
+    .hero__stat {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: var(--border-radius);
+      padding: var(--spacing-md);
+      margin: var(--spacing-md) auto;
+      max-width: 600px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .hero__stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      display: block;
+      font-family: var(--font-heading);
+    }
+    
+    .hero__stat-text {
+      font-size: 1.1rem;
+      color: white;
+    }
+    
+    .hero__cta {
+      margin-top: var(--spacing-md);
+      display: flex;
+      gap: var(--spacing-sm);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    /* ==================== CONTEXTO SECTION ==================== */
+    .contexto__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+    
+    .contexto__card {
+      background-color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition);
+    }
+    
+    .contexto__card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .contexto__icon {
+      font-size: 3rem;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .contexto__title {
+      font-size: 1.25rem;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .contexto__text {
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+    }
+    
+    /* ==================== PROBLEMÁTICAS SECTION ==================== */
+    .problematicas__list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .problematica__item {
+      background-color: white;
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+      border-radius: var(--border-radius);
+      border-left: 4px solid var(--color-accent);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      transition: var(--transition);
+    }
+    
+    .problematica__item:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .problematica__icon {
+      font-size: 2rem;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+    
+    .problematica__text {
+      flex: 1;
+      margin: 0;
+      color: var(--color-text);
+    }
+    
+    /* ==================== DESAFÍOS SECTION ==================== */
+    .desafios__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+    
+    .desafio__card {
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+    
+    .desafio__card:hover {
+      border-color: var(--color-secondary);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .desafio__number {
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .desafio__title {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .desafio__text {
+      margin: 0;
+    }
+    
+    /* ==================== PROPUESTA SECTION ==================== */
+    .propuesta {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, #059669 100%);
+      color: white;
+    }
+    
+    .propuesta h2 {
+      color: white;
+    }
+    
+    .propuesta__objetivo {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      margin: var(--spacing-md) 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .propuesta__objetivo-title {
+      color: var(--color-accent);
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .propuesta__objetivo-text {
+      color: white;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    
+    .propuesta__estrategias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+    }
+    
+    .estrategia__card {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: var(--transition);
+    }
+    
+    .estrategia__card:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-5px);
+    }
+    
+    .estrategia__icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .estrategia__title {
+      color: white;
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .estrategia__text {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+    }
+    
+    .propuesta__indicadores {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      margin-top: var(--spacing-md);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .propuesta__indicadores h3 {
+      color: white;
+      text-align: center;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .indicadores__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-sm);
+    }
+    
+    .indicador {
+      text-align: center;
+      padding: var(--spacing-sm);
+    }
+    
+    .indicador__numero {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      display: block;
+      font-family: var(--font-heading);
+    }
+    
+    .indicador__texto {
+      color: white;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    
+    /* ==================== ALIADOS SECTION ==================== */
+    .aliados__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+    
+    .aliado__categoria {
+      background-color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    
+    .aliado__categoria:hover {
+      box-shadow: var(--shadow-md);
+    }
+    
+    .aliado__titulo {
+      color: var(--color-primary);
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+    
+    .aliado__icon {
+      font-size: 1.5rem;
+    }
+    
+    .aliado__lista {
+      padding-left: var(--spacing-sm);
+    }
+    
+    .aliado__lista li {
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-xs);
+      position: relative;
+      padding-left: var(--spacing-sm);
+    }
+    
+    .aliado__lista li::before {
+      content: '•';
+      color: var(--color-secondary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    /* ==================== CTA SECTION ==================== */
+    .cta {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+      color: white;
+      text-align: center;
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .cta h2 {
+      color: white;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .cta__text {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: 0 auto var(--spacing-md);
+    }
+    
+    .cta__quote {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--color-accent);
+      margin: var(--spacing-md) 0;
+      font-family: var(--font-heading);
+    }
+    
+    .cta__buttons {
+      display: flex;
+      gap: var(--spacing-sm);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--spacing-md);
+    }
+    
+    .btn--outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn--outline:hover {
+      background-color: white;
+      color: var(--color-primary);
+    }
+    
+    /* ==================== FOOTER ==================== */
+    .footer {
+      background-color: var(--color-text);
+      color: rgba(255, 255, 255, 0.8);
+      padding: var(--spacing-lg) 0 var(--spacing-md);
+    }
+    
+    .footer__content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .footer__section h3 {
+      color: white;
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .footer__text {
+      margin-bottom: var(--spacing-sm);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .footer__social {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-sm);
+    }
+    
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      transition: var(--transition);
+    }
+    
+    .footer__social-link:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-3px);
+    }
+    
+    .footer__contact-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      margin-bottom: var(--spacing-xs);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .footer__contact-icon {
+      color: var(--color-secondary);
+    }
+    
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: var(--spacing-md);
+      text-align: center;
+    }
+    
+    .footer__bottom p {
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+    }
+    
+    /* ==================== BOTÓN FLOTANTE WHATSAPP ==================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: var(--shadow-lg);
+      z-index: 999;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+    }
+    
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.75rem;
+      }
+      
+      .hero__title {
+        font-size: 2.25rem;
+      }
+      
+      .hero__stat-number {
+        font-size: 2.5rem;
+      }
+      
+      .nav__menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-background);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-md);
+        transition: left 0.3s ease;
+      }
+      
+      .nav__menu.active {
+        left: 0;
+      }
+      
+      .nav__toggle {
+        display: block;
+      }
+      
+      .hero__cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+      
+      .cta__buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.75rem;
+      }
+      
+      .section {
+        padding: var(--spacing-md) 0;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero__title {
+        font-size: 3.5rem;
+      }
+      
+      .section {
+        padding: var(--spacing-xl) 0;
+      }
+    }
+  </style>
+
+
+  
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Cauca Colombia</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#contexto" class="nav__link">Contexto</a></li>
+        <li><a href="#problematicas" class="nav__link">Problemáticas</a></li>
+        <li><a href="#propuesta" class="nav__link">Propuesta</a></li>
+        <li><a href="#aliados" class="nav__link">Aliados</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">Desafíos y Oportunidades del Departamento del Cauca</h1>
+        <p class="hero__subtitle">Un proyecto de desarrollo rural sostenible, inclusión social y construcción de paz territorial</p>
+        
+        <div class="hero__stat">
+          <span class="hero__stat-number">+45%</span>
+          <p class="hero__stat-text">de la población vive en condiciones de pobreza multidimensional. Es momento de actuar.</p>
+        </div>
+        
+        <div class="hero__cta">
+          <a href="#propuesta" class="btn btn--primary">Ver Propuesta</a>
+          <a href="#contacto" class="btn btn--secondary">Participar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== CONTEXTO SECTION ==================== -->
+  <section id="contexto" class="section section--alt">
+    <div class="container">
+      <h2 class="fade-in visible">Contexto del Departamento del Cauca</h2>
+      <div class="contexto__grid">
+        <div class="contexto__card fade-in visible">
+          <i class="fas fa-map-marker-alt contexto__icon"></i>
+          <h3 class="contexto__title">Ubicación</h3>
+          <p class="contexto__text">Región suroccidental de Colombia, capital Popayán</p>
+        </div>
+        
+        <div class="contexto__card fade-in visible">
+          <i class="fas fa-users contexto__icon"></i>
+          <h3 class="contexto__title">Población</h3>
+          <p class="contexto__text">Aproximadamente 1.5 millones de habitantes</p>
+        </div>
+        
+        <div class="contexto__card fade-in visible">
+          <i class="fas fa-briefcase contexto__icon"></i>
+          <h3 class="contexto__title">Economía</h3>
+          <p class="contexto__text">Agricultura, minería, ganadería y comercio</p>
+        </div>
+        
+        <div class="contexto__card fade-in visible">
+          <i class="fas fa-hands-helping contexto__icon"></i>
+          <h3 class="contexto__title">Diversidad</h3>
+          <p class="contexto__text">Comunidades indígenas, afrodescendientes y campesinas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== PROBLEMÁTICAS SECTION ==================== -->
+  <section id="problematicas" class="section">
+    <div class="container">
+      <h2 class="fade-in visible">Principales Problemáticas Sociales</h2>
+      <div class="problematicas__list">
+        <div class="problematica__item fade-in visible">
+          <i class="fas fa-graduation-cap problematica__icon"></i>
+          <p class="problematica__text">Desigualdad educativa y alta deserción escolar en zonas rurales</p>
+        </div>
+        
+        <div class="problematica__item fade-in visible">
+          <i class="fas fa-hospital problematica__icon"></i>
+          <p class="problematica__text">Acceso deficiente a servicios de salud de calidad</p>
+        </div>
+        
+        <div class="problematica__item fade-in visible">
+          <i class="fas fa-chart-line problematica__icon"></i>
+          <p class="problematica__text">Pobreza multidimensional superior al 45% de la población</p>
+        </div>
+        
+        <div class="problematica__item fade-in visible">
+          <i class="fas fa-exclamation-triangle problematica__icon"></i>
+          <p class="problematica__text">Presencia de grupos armados y conflictos territoriales persistentes</p>
+        </div>
+        
+        <div class="problematica__item fade-in visible">
+          <i class="fas fa-road problematica__icon"></i>
+          <p class="problematica__text">Brechas significativas en infraestructura y conectividad digital</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== DESAFÍOS SECTION ==================== -->
+  <section id="desafios" class="section section--alt">
+    <div class="container">
+      <h2 class="fade-in visible">Desafíos Estructurales</h2>
+      <div class="desafios__grid">
+        <div class="desafio__card fade-in visible">
+          <div class="desafio__number">1</div>
+          <h3 class="desafio__title">Infraestructura Vial</h3>
+          <p class="desafio__text">Deterioro significativo de la infraestructura vial y rural que limita el desarrollo económico</p>
+        </div>
+        
+        <div class="desafio__card fade-in visible">
+          <div class="desafio__number">2</div>
+          <h3 class="desafio__title">Capacidad Institucional</h3>
+          <p class="desafio__text">Capacidad institucional limitada y presencia de corrupción en diversos niveles</p>
+        </div>
+        
+        <div class="desafio__card fade-in visible">
+          <div class="desafio__number">3</div>
+          <h3 class="desafio__title">Servicios Básicos</h3>
+          <p class="desafio__text">Dificultades en la cobertura universal de servicios básicos esenciales</p>
+        </div>
+        
+        <div class="desafio__card fade-in visible">
+          <div class="desafio__number">4</div>
+          <h3 class="desafio__title">Gobernanza Local</h3>
+          <p class="desafio__text">Necesidad urgente de fortalecer la gobernanza local y la participación ciudadana activa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== PROPUESTA SECTION ==================== -->
+  <section id="propuesta" class="section propuesta">
+    <div class="container">
+      <h2 class="fade-in visible">Propuesta: Fortalecimiento del Desarrollo Rural y Comunitario</h2>
+      
+      <div class="propuesta__objetivo fade-in visible">
+        <h3 class="propuesta__objetivo-title">Objetivo Principal</h3>
+        <p class="propuesta__objetivo-text">Impulsar el desarrollo sostenible, la inclusión social y la construcción de paz territorial en el Departamento del Cauca</p>
+      </div>
+      
+      <div class="propuesta__estrategias">
+        <div class="estrategia__card fade-in visible">
+          <i class="fas fa-seedling estrategia__icon"></i>
+          <h3 class="estrategia__title">Fortalecimiento Productivo</h3>
+          <p class="estrategia__text">Desarrollo de capacidades productivas sostenibles con enfoque agroecológico y comercialización justa</p>
+        </div>
+        
+        <div class="estrategia__card fade-in visible">
+          <i class="fas fa-book-reader estrategia__icon"></i>
+          <h3 class="estrategia__title">Educación y Cohesión</h3>
+          <p class="estrategia__text">Programas educativos inclusivos que fortalezcan la cohesión social y el tejido comunitario</p>
+        </div>
+        
+        <div class="estrategia__card fade-in visible">
+          <i class="fas fa-network-wired estrategia__icon"></i>
+          <h3 class="estrategia__title">Infraestructura Rural</h3>
+          <p class="estrategia__text">Mejoramiento de infraestructura vial y conectividad digital en zonas rurales apartadas</p>
+        </div>
+      </div>
+      
+      <div class="propuesta__indicadores fade-in visible">
+        <h3>Indicadores de Impacto Esperados</h3>
+        <div class="indicadores__grid">
+          <div class="indicador">
+            <span class="indicador__numero">+30%</span>
+            <p class="indicador__texto">Incremento en ingresos de familias rurales</p>
+          </div>
+          <div class="indicador">
+            <span class="indicador__numero">-15%</span>
+            <p class="indicador__texto">Reducción en deserción escolar</p>
+          </div>
+          <div class="indicador">
+            <span class="indicador__numero">50+</span>
+            <p class="indicador__texto">Comunidades beneficiadas directamente</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== ALIADOS SECTION ==================== -->
+  <section id="aliados" class="section">
+    <div class="container">
+      <h2 class="fade-in visible">Aliados Estratégicos</h2>
+      <div class="aliados__grid">
+        <div class="aliado__categoria fade-in visible">
+          <h3 class="aliado__titulo">
+            <i class="fas fa-landmark aliado__icon"></i>
+            Instituciones Públicas
+          </h3>
+          <ul class="aliado__lista">
+            <li>Gobernación del Cauca</li>
+            <li>Ministerio de Agricultura</li>
+            <li>SENA Regional Cauca</li>
+          </ul>
+        </div>
+        
+        <div class="aliado__categoria fade-in visible">
+          <h3 class="aliado__titulo">
+            <i class="fas fa-building aliado__icon"></i>
+            Sector Privado
+          </h3>
+          <ul class="aliado__lista">
+            <li>Fundación Alpina</li>
+            <li>Cámara de Comercio del Cauca</li>
+            <li>Empresas locales comprometidas</li>
+          </ul>
+        </div>
+        
+        <div class="aliado__categoria fade-in visible">
+          <h3 class="aliado__titulo">
+            <i class="fas fa-globe aliado__icon"></i>
+            ONG Internacionales
+          </h3>
+          <ul class="aliado__lista">
+            <li>PNUD Colombia</li>
+            <li>Fundación Plan</li>
+            <li>Acción Contra el Hambre</li>
+          </ul>
+        </div>
+        
+        <div class="aliado__categoria fade-in visible">
+          <h3 class="aliado__titulo">
+            <i class="fas fa-university aliado__icon"></i>
+            Sector Académico
+          </h3>
+          <ul class="aliado__lista">
+            <li>Universidad del Cauca</li>
+            <li>Universidad Cooperativa de Colombia</li>
+            <li>Centros de investigación regional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h3>Cauca Colombia</h3>
+          <p class="footer__text">Proyecto de desarrollo social presentado en el marco de la materia Problemática Social Colombiana</p>
+        
+        <div class="footer__section">
+          <h3>Navegación</h3>
+          <div class="footer__contact-item">
+            <a href="#inicio">Inicio</a>
+          </div>
+          <div class="footer__contact-item">
+            <a href="#contexto">Contexto</a>
+          </div>
+          <div class="footer__contact-item">
+            <a href="#problematicas">Problemáticas</a>
+          </div>
+          <div class="footer__contact-item">
+            <a href="#propuesta">Propuesta</a>
+          </div>
+          <div class="footer__contact-item">
+            <a href="#aliados">Aliados</a>
+          </div>
+        </div>
+      </div>
+  </div></div></footer>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Menú hamburguesa móvil
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      });
+    });
+    
+    // Animaciones al hacer scroll (Intersection Observer)
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    
+    // Observar todos los elementos con clase fade-in
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el => observer.observe(el));
+    
+    // Smooth scroll para navegación
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Header transparente al hacer scroll
+    const header = document.querySelector('.header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+      }
+      
+      lastScroll = currentScroll;
+    });
+  </script>
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>
