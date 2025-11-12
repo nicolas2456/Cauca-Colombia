@@ -1518,14 +1518,14 @@
                 min="0"
                 max="10000000000"
                 step="500000000"
-                value="5000000000"
+                value="0"
                 aria-label="Inversión en educación">
               <div class="slider-minmax">
                 <span>$0</span>
                 <span>$10.000 millones</span>
               </div>
             </div>
-            <span class="valor-actual" id="valor-educacion">$5.000.000.000</span>
+            <span class="valor-actual" id="valor-educacion">$0</span>
           </div>
 
           <div class="control-group">
@@ -1540,14 +1540,14 @@
                 min="0"
                 max="15000000000"
                 step="1000000000"
-                value="10000000000"
+                value="0"
                 aria-label="Inversión en infraestructura">
               <div class="slider-minmax">
                 <span>$0</span>
                 <span>$15.000 millones</span>
               </div>
             </div>
-            <span class="valor-actual" id="valor-infraestructura">$10.000.000.000</span>
+            <span class="valor-actual" id="valor-infraestructura">$0</span>
           </div>
 
           <div class="control-group">
@@ -1562,20 +1562,20 @@
                 min="0"
                 max="12000000000"
                 step="500000000"
-                value="8000000000"
+                value="0"
                 aria-label="Inversión en desarrollo productivo">
               <div class="slider-minmax">
                 <span>$0</span>
                 <span>$12.000 millones</span>
               </div>
             </div>
-            <span class="valor-actual" id="valor-desarrollo">$8.000.000.000</span>
+            <span class="valor-actual" id="valor-desarrollo">$0</span>
           </div>
 
           <div class="inversion-total">
             <i class="fas fa-calculator"></i>
             <span>Inversión Total</span>
-            <h3 id="inversion-total-valor">$23.000.000.000</h3>
+            <h3 id="inversion-total-valor">$0</h3>
           </div>
 
           <button class="btn btn--secondary btn-reset" id="btn-reset">
@@ -1587,35 +1587,35 @@
         <div class="calculadora-resultados">
           <div class="resultado-card">
             <i class="fas fa-user-graduate"></i>
-            <h3 class="numero" id="resultado-estudiantes">2,500</h3>
+            <h3 class="numero" id="resultado-estudiantes">0</h3>
             <p class="label">Estudiantes beneficiados</p>
             <p class="explicacion">Con alimentación escolar, útiles y transporte incluidos</p>
           </div>
 
           <div class="resultado-card">
             <i class="fas fa-road"></i>
-            <h3 class="numero" id="resultado-kilometros">80</h3>
+            <h3 class="numero" id="resultado-kilometros">0</h3>
             <p class="label">Kilómetros de vía mejorados</p>
             <p class="explicacion">Vías terciarias pavimentadas con señalización</p>
           </div>
 
           <div class="resultado-card">
             <i class="fas fa-users"></i>
-            <h3 class="numero" id="resultado-familias">400</h3>
+            <h3 class="numero" id="resultado-familias">0</h3>
             <p class="label">Familias con empleo generado</p>
             <p class="explicacion">Unidades productivas familiares fortalecidas</p>
           </div>
 
           <div class="resultado-card">
             <i class="fas fa-home"></i>
-            <h3 class="numero" id="resultado-comunidades">69</h3>
+            <h3 class="numero" id="resultado-comunidades">0</h3>
             <p class="label">Comunidades impactadas</p>
             <p class="explicacion">Veredas y resguardos con intervención integral</p>
           </div>
 
           <div class="mensaje-motivacional">
             <i class="fas fa-heart"></i>
-            <p id="mensaje-texto">Esta inversión permite un impacto significativo en múltiples regiones del Cauca</p>
+            <p id="mensaje-texto">Con esta inversión inicial podemos comenzar a generar cambios en comunidades piloto</p>
           </div>
         </div>
       </div>
@@ -1922,9 +1922,9 @@
 
     // Valores iniciales
     const valoresIniciales = {
-      educacion: 5000000000,
-      infraestructura: 10000000000,
-      desarrollo: 8000000000
+      educacion: 0,
+      infraestructura: 0,
+      desarrollo: 0
     };
 
     // Función para formatear números en pesos colombianos
