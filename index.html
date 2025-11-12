@@ -739,28 +739,168 @@
       box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
     }
     
+    /* ==================== MAPA INTERACTIVO SECTION ==================== */
+    .mapa-interactivo {
+      background-color: var(--color-background);
+    }
+
+    .mapa-container {
+      display: flex;
+      gap: var(--spacing-md);
+      align-items: flex-start;
+      margin-top: var(--spacing-md);
+    }
+
+    .mapa-wrapper {
+      flex: 1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .mapa-svg {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .region {
+      fill: rgba(37, 99, 235, 0.3);
+      stroke: var(--color-primary);
+      stroke-width: 2;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .region:hover {
+      fill: rgba(37, 99, 235, 0.5);
+      stroke-width: 3;
+      filter: brightness(1.1);
+    }
+
+    .region.selected {
+      fill: rgba(245, 158, 11, 0.4);
+      stroke: var(--color-accent);
+      stroke-width: 4;
+    }
+
+    .region-label {
+      fill: var(--color-text);
+      font-size: 14px;
+      font-weight: 600;
+      pointer-events: none;
+      text-anchor: middle;
+      font-family: var(--font-body);
+    }
+
+    .region-info-wrapper {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .region-info-card {
+      background-color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+      min-height: 400px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .region-info-card.placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      border: 2px dashed var(--color-border);
+      color: var(--color-text-light);
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .region-info-header {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 3px solid var(--color-accent);
+    }
+
+    .region-info-icon {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+    }
+
+    .region-info-title {
+      font-size: 1.75rem;
+      color: var(--color-text);
+      margin: 0;
+    }
+
+    .region-info-content {
+      display: grid;
+      gap: var(--spacing-sm);
+    }
+
+    .region-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-xs);
+      padding: var(--spacing-xs);
+      background-color: var(--color-background-alt);
+      border-radius: calc(var(--border-radius) / 2);
+    }
+
+    .region-info-item i {
+      color: var(--color-secondary);
+      margin-top: 3px;
+      font-size: 1.1rem;
+    }
+
+    .region-info-item strong {
+      color: var(--color-text);
+      margin-right: 5px;
+    }
+
+    .region-info-item span {
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
     /* ==================== RESPONSIVE ==================== */
     @media (max-width: 768px) {
       html {
         font-size: 14px;
       }
-      
+
       h1 {
         font-size: 2rem;
       }
-      
+
       h2 {
         font-size: 1.75rem;
       }
-      
+
       .hero__title {
         font-size: 2.25rem;
       }
-      
+
       .hero__stat-number {
         font-size: 2.5rem;
       }
-      
+
       .nav__menu {
         position: fixed;
         top: 70px;
@@ -772,29 +912,29 @@
         box-shadow: var(--shadow-md);
         transition: left 0.3s ease;
       }
-      
+
       .nav__menu.active {
         left: 0;
       }
-      
+
       .nav__toggle {
         display: block;
       }
-      
+
       .hero__cta {
         flex-direction: column;
         align-items: stretch;
       }
-      
+
       .btn {
         width: 100%;
       }
-      
+
       .cta__buttons {
         flex-direction: column;
         align-items: stretch;
       }
-      
+
       .whatsapp-float {
         bottom: 20px;
         right: 20px;
@@ -802,17 +942,34 @@
         height: 55px;
         font-size: 1.75rem;
       }
-      
+
       .section {
         padding: var(--spacing-md) 0;
       }
+
+      .mapa-container {
+        flex-direction: column;
+      }
+
+      .mapa-wrapper {
+        max-width: 100%;
+      }
+
+      .region-info-wrapper {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .region-label {
+        font-size: 11px;
+      }
     }
-    
+
     @media (min-width: 1024px) {
       .hero__title {
         font-size: 3.5rem;
       }
-      
+
       .section {
         padding: var(--spacing-xl) 0;
       }
@@ -831,6 +988,7 @@
       <ul class="nav__menu" id="navMenu">
         <li><a href="#inicio" class="nav__link">Inicio</a></li>
         <li><a href="#contexto" class="nav__link">Contexto</a></li>
+        <li><a href="#mapa-interactivo" class="nav__link">Mapa</a></li>
         <li><a href="#problematicas" class="nav__link">Problemáticas</a></li>
         <li><a href="#propuesta" class="nav__link">Propuesta</a></li>
         <li><a href="#aliados" class="nav__link">Aliados</a></li>
@@ -883,7 +1041,76 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- ==================== MAPA INTERACTIVO SECTION ==================== -->
+  <section id="mapa-interactivo" class="section mapa-interactivo">
+    <div class="container">
+      <h2 class="fade-in">Explora el Cauca por Regiones</h2>
+
+      <div class="mapa-container fade-in">
+        <!-- Mapa SVG -->
+        <div class="mapa-wrapper">
+          <svg class="mapa-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+            <!-- Norte del Cauca -->
+            <polygon
+              class="region"
+              data-region="norte"
+              points="100,50 400,50 450,150 350,200 150,200 50,150"
+              title="Norte del Cauca">
+            </polygon>
+            <text class="region-label" x="250" y="130">Norte del Cauca</text>
+
+            <!-- Pacífico Caucano -->
+            <polygon
+              class="region"
+              data-region="pacifico"
+              points="50,150 150,200 120,350 80,450 30,400 20,250"
+              title="Pacífico Caucano">
+            </polygon>
+            <text class="region-label" x="85" y="310">Pacífico</text>
+            <text class="region-label" x="85" y="330">Caucano</text>
+
+            <!-- Centro (Popayán) -->
+            <polygon
+              class="region"
+              data-region="centro"
+              points="150,200 350,200 380,280 320,350 180,350 120,280"
+              title="Centro - Popayán">
+            </polygon>
+            <text class="region-label" x="250" y="275">Popayán</text>
+
+            <!-- Sur del Cauca -->
+            <polygon
+              class="region"
+              data-region="sur"
+              points="180,350 320,350 350,420 300,500 200,500 150,420"
+              title="Sur del Cauca">
+            </polygon>
+            <text class="region-label" x="250" y="430">Sur del Cauca</text>
+
+            <!-- Macizo Colombiano -->
+            <polygon
+              class="region"
+              data-region="macizo"
+              points="300,500 350,420 450,450 480,550 400,580 320,560"
+              title="Macizo Colombiano">
+            </polygon>
+            <text class="region-label" x="390" y="510">Macizo</text>
+            <text class="region-label" x="390" y="530">Colombiano</text>
+          </svg>
+        </div>
+
+        <!-- Tarjeta de información -->
+        <div class="region-info-wrapper">
+          <div id="region-info" class="region-info-card placeholder">
+            <p><i class="fas fa-hand-pointer" style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-primary);"></i><br>
+            Haz clic en una región para conocer más</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== PROBLEMÁTICAS SECTION ==================== -->
   <section id="problematicas" class="section">
     <div class="container">
@@ -1073,6 +1300,9 @@
             <a href="#contexto">Contexto</a>
           </div>
           <div class="footer__contact-item">
+            <a href="#mapa-interactivo">Mapa Interactivo</a>
+          </div>
+          <div class="footer__contact-item">
             <a href="#problematicas">Problemáticas</a>
           </div>
           <div class="footer__contact-item">
@@ -1144,17 +1374,131 @@
     // Header transparente al hacer scroll
     const header = document.querySelector('.header');
     let lastScroll = 0;
-    
+
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
-      
+
       if (currentScroll > 100) {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
       } else {
         header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
       }
-      
+
       lastScroll = currentScroll;
+    });
+
+    // ==================== MAPA INTERACTIVO ====================
+
+    // Datos de las regiones
+    const regionesData = {
+      norte: {
+        nombre: 'Norte del Cauca',
+        poblacion: '400,000 habitantes',
+        actividad: 'Cultivo de caña de azúcar y agroindustria',
+        problematica: 'Presencia de grupos armados y conflictos territoriales',
+        comunidades: 'Comunidades indígenas Nasa y población mestiza',
+        icono: 'fa-industry'
+      },
+      centro: {
+        nombre: 'Centro (Popayán)',
+        poblacion: '320,000 habitantes',
+        actividad: 'Comercio, servicios y turismo cultural',
+        problematica: 'Desigualdad urbano-rural y desempleo juvenil',
+        comunidades: 'Población mestiza y comunidades indígenas urbanas',
+        icono: 'fa-city'
+      },
+      sur: {
+        nombre: 'Sur del Cauca',
+        poblacion: '280,000 habitantes',
+        actividad: 'Agricultura de café, ganadería y cultivos de pancoger',
+        problematica: 'Falta de infraestructura vial y aislamiento',
+        comunidades: 'Comunidades campesinas e indígenas Yanaconas',
+        icono: 'fa-mountain'
+      },
+      pacifico: {
+        nombre: 'Pacífico Caucano',
+        poblacion: '250,000 habitantes',
+        actividad: 'Pesca artesanal, minería y agricultura tradicional',
+        problematica: 'Aislamiento extremo por falta de vías terrestres',
+        comunidades: 'Comunidades afrodescendientes mayoritariamente',
+        icono: 'fa-water'
+      },
+      macizo: {
+        nombre: 'Macizo Colombiano',
+        poblacion: '150,000 habitantes',
+        actividad: 'Agricultura de subsistencia y ganadería menor',
+        problematica: 'Alta deserción escolar y pobreza extrema',
+        comunidades: 'Comunidades indígenas y campesinas',
+        icono: 'fa-seedling'
+      }
+    };
+
+    // Función para mostrar información de una región
+    function mostrarInfoRegion(regionId) {
+      const region = regionesData[regionId];
+      const infoCard = document.getElementById('region-info');
+
+      if (!region) return;
+
+      // Remover clase selected de todas las regiones
+      document.querySelectorAll('.region').forEach(r => {
+        r.classList.remove('selected');
+      });
+
+      // Agregar clase selected a la región clickeada
+      document.querySelector(`[data-region="${regionId}"]`).classList.add('selected');
+
+      // Actualizar contenido de la tarjeta
+      infoCard.className = 'region-info-card';
+      infoCard.innerHTML = `
+        <div class="region-info-header">
+          <i class="fas ${region.icono} region-info-icon"></i>
+          <h3 class="region-info-title">${region.nombre}</h3>
+        </div>
+        <div class="region-info-content">
+          <div class="region-info-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <strong>Población:</strong>
+              <span>${region.poblacion}</span>
+            </div>
+          </div>
+          <div class="region-info-item">
+            <i class="fas fa-briefcase"></i>
+            <div>
+              <strong>Actividad económica:</strong>
+              <span>${region.actividad}</span>
+            </div>
+          </div>
+          <div class="region-info-item">
+            <i class="fas fa-exclamation-circle"></i>
+            <div>
+              <strong>Problemática principal:</strong>
+              <span>${region.problematica}</span>
+            </div>
+          </div>
+          <div class="region-info-item">
+            <i class="fas fa-hands-helping"></i>
+            <div>
+              <strong>Comunidades étnicas:</strong>
+              <span>${region.comunidades}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Agregar event listeners a las regiones del mapa
+    document.querySelectorAll('.region').forEach(region => {
+      region.addEventListener('click', function() {
+        const regionId = this.getAttribute('data-region');
+        mostrarInfoRegion(regionId);
+      });
+
+      // Mostrar tooltip en hover
+      region.addEventListener('mouseenter', function() {
+        this.style.cursor = 'pointer';
+      });
     });
   </script>
 
