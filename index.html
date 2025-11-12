@@ -283,7 +283,56 @@
       margin-bottom: var(--spacing-md);
       font-weight: 300;
     }
-    
+
+    .hero__presenters {
+      margin: var(--spacing-lg) auto;
+      text-align: center;
+    }
+
+    .presenters__label {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    .presenters__names {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .presenter__name {
+      font-size: 1.5rem;
+      color: white;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      padding: 0.5rem 1.5rem;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .presenter__name:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .presenters__separator {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+      font-style: italic;
+    }
+
     .hero__stat {
       background-color: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
@@ -1701,6 +1750,20 @@
         font-size: 2.5rem;
       }
 
+      .presenters__label {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+      }
+
+      .presenter__name {
+        font-size: 1.25rem;
+        padding: 0.4rem 1.2rem;
+      }
+
+      .presenters__separator {
+        font-size: 1rem;
+      }
+
       .nav__menu {
         position: fixed;
         top: 70px;
@@ -1873,7 +1936,16 @@
       <div class="hero__content">
         <h1 class="hero__title">Desafíos y Oportunidades del Departamento del Cauca</h1>
         <p class="hero__subtitle">Un proyecto de desarrollo rural sostenible, inclusión social y construcción de paz territorial</p>
-        
+
+        <div class="hero__presenters">
+          <div class="presenters__label">Presentado por</div>
+          <div class="presenters__names">
+            <span class="presenter__name">Camilo Solano</span>
+            <span class="presenters__separator">y</span>
+            <span class="presenter__name">Nicolas Serrano</span>
+          </div>
+        </div>
+
         <div class="hero__stat">
           <span class="hero__stat-number">+45%</span>
           <p class="hero__stat-text">de la población vive en condiciones de pobreza multidimensional. Es momento de actuar.</p>
