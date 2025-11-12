@@ -1137,6 +1137,548 @@
       font-weight: 500;
     }
 
+    /* ==================== ESTADÍSTICAS VIVAS ==================== */
+    .estadisticas-vivas {
+      background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+      color: white;
+    }
+
+    .estadisticas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .estadistica-card {
+      text-align: center;
+      padding: var(--spacing-md);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--border-radius);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .estadistica-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .estadistica-icon {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .estadistica-numero {
+      font-size: 4rem;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      margin: var(--spacing-xs) 0;
+      line-height: 1;
+    }
+
+    .estadistica-unidad {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .estadistica-calculo {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin: var(--spacing-xs) 0;
+    }
+
+    .estadistica-texto {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: var(--spacing-sm);
+      line-height: 1.4;
+    }
+
+    .estadisticas-vivas h2 {
+      color: white;
+    }
+
+    .estadisticas-subtitle {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .estadisticas-mensaje {
+      text-align: center;
+      font-size: 1.3rem;
+      color: var(--color-accent);
+      margin-top: var(--spacing-lg);
+      font-weight: 600;
+    }
+
+    /* ==================== COMPARADOR CAUCA VS COLOMBIA ==================== */
+    .comparador-cauca {
+      background-color: var(--color-background);
+    }
+
+    .comparador-subtitle {
+      text-align: center;
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .comparacion-item {
+      margin-bottom: var(--spacing-lg);
+      background: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comparacion-header {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .comparacion-icon {
+      font-size: 2rem;
+      color: var(--color-primary);
+    }
+
+    .comparacion-titulo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0;
+    }
+
+    .barra-container {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .barra-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: var(--spacing-xs);
+      font-weight: 600;
+    }
+
+    .barra-label-cauca {
+      color: #ef4444;
+    }
+
+    .barra-label-colombia {
+      color: #2563eb;
+    }
+
+    .barra-wrapper {
+      width: 100%;
+      height: 40px;
+      background-color: var(--color-background-alt);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .barra {
+      height: 100%;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: var(--spacing-sm);
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: width 1.5s ease-out;
+      width: 0;
+    }
+
+    .barra.animated {
+      /* Width se setea vía JavaScript */
+    }
+
+    .barra-cauca {
+      background: linear-gradient(90deg, #ef4444, #f59e0b);
+    }
+
+    .barra-colombia {
+      background: linear-gradient(90deg, #2563eb, #3b82f6);
+    }
+
+    .comparacion-nota {
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+      font-style: italic;
+      margin-top: var(--spacing-xs);
+      padding-left: var(--spacing-sm);
+      border-left: 3px solid var(--color-accent);
+    }
+
+    .comparador-mensaje {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-top: var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: rgba(37, 99, 235, 0.05);
+      border-radius: var(--border-radius);
+    }
+
+    /* ==================== VOCES DEL CAUCA ==================== */
+    .voces-cauca {
+      background-color: var(--color-background-alt);
+    }
+
+    .voces-subtitle {
+      text-align: center;
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .voces-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .voz-card {
+      perspective: 1000px;
+      height: 400px;
+      cursor: pointer;
+    }
+
+    .voz-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .voz-card.flipped .voz-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .voz-card-front,
+    .voz-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .voz-card-front {
+      background: white;
+    }
+
+    .voz-card-back {
+      background: white;
+      transform: rotateY(180deg);
+      padding: var(--spacing-lg);
+    }
+
+    .voz-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: var(--spacing-md);
+      font-family: var(--font-heading);
+    }
+
+    .voz-nombre {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: var(--spacing-xs) 0;
+    }
+
+    .voz-edad {
+      font-size: 1rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .voz-rol {
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .voz-icono {
+      font-size: 2.5rem;
+      color: var(--color-secondary);
+    }
+
+    .voz-historia {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-text);
+      text-align: left;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .voz-tag {
+      display: inline-block;
+      padding: var(--spacing-xs) var(--spacing-sm);
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--color-primary);
+      border-radius: calc(var(--border-radius) / 2);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: var(--spacing-sm);
+    }
+
+    .voz-card-front .instruccion {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: var(--spacing-sm);
+      font-style: italic;
+    }
+
+    /* ==================== LÍNEA DE TIEMPO ==================== */
+    .linea-tiempo {
+      background-color: var(--color-background);
+      overflow-x: hidden;
+    }
+
+    .timeline-subtitle {
+      text-align: center;
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .timeline-container {
+      position: relative;
+      padding: var(--spacing-lg) 0;
+      margin: var(--spacing-lg) auto;
+      max-width: 1200px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: var(--color-border);
+      transform: translateY(-50%);
+    }
+
+    .timeline-events {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-event {
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .timeline-point {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 3px solid;
+      background: white;
+      margin: 0 auto var(--spacing-sm);
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 currentColor;
+      }
+      50% {
+        box-shadow: 0 0 0 8px transparent;
+      }
+    }
+
+    .timeline-event:hover .timeline-point,
+    .timeline-event.active .timeline-point {
+      transform: scale(1.5);
+      animation: none;
+    }
+
+    .timeline-year {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .timeline-card {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      background: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-lg);
+      margin-top: var(--spacing-md);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .timeline-event.active .timeline-card {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .timeline-card-icon {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .timeline-card-text {
+      font-size: 0.95rem;
+      color: var(--color-text);
+      line-height: 1.5;
+    }
+
+    /* ==================== ANTES Y DESPUÉS ==================== */
+    .antes-despues {
+      background: var(--color-background-alt);
+    }
+
+    .antes-despues-subtitle {
+      text-align: center;
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .comparaciones-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-md);
+    }
+
+    .comparacion-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+      height: 400px;
+      background: white;
+      cursor: ew-resize;
+    }
+
+    .comparacion-content {
+      display: flex;
+      height: 100%;
+      position: relative;
+    }
+
+    .comparacion-antes,
+    .comparacion-despues {
+      flex: 1;
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+    }
+
+    .comparacion-antes {
+      left: 0;
+      background: linear-gradient(135deg, #fee2e2 0%, #fef3c7 100%);
+    }
+
+    .comparacion-despues {
+      right: 0;
+      background: linear-gradient(135deg, #d1fae5 0%, #dbeafe 100%);
+    }
+
+    .comparacion-label {
+      position: absolute;
+      top: var(--spacing-sm);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: calc(var(--border-radius) / 2);
+      z-index: 2;
+    }
+
+    .label-antes {
+      left: var(--spacing-sm);
+    }
+
+    .label-despues {
+      right: var(--spacing-sm);
+    }
+
+    .comparacion-icono {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .comparacion-titulo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .comparacion-descripcion {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--color-text);
+    }
+
+    .antes-despues-mensaje {
+      text-align: center;
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-top: var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+    }
+
     /* ==================== RESPONSIVE ==================== */
     @media (max-width: 768px) {
       html {
@@ -1233,6 +1775,63 @@
       .resultado-card .numero {
         font-size: 2rem;
       }
+
+      .estadisticas-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .estadistica-numero {
+        font-size: 3rem;
+      }
+
+      .voces-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .voz-card {
+        height: auto;
+        min-height: 300px;
+      }
+
+      .timeline-events {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+      }
+
+      .timeline-line {
+        top: 0;
+        bottom: 0;
+        left: 12px;
+        width: 4px;
+        height: auto;
+        transform: none;
+      }
+
+      .timeline-event {
+        text-align: left;
+        padding-left: var(--spacing-lg);
+      }
+
+      .timeline-point {
+        position: absolute;
+        left: 0;
+        margin: 0;
+      }
+
+      .timeline-card {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: var(--spacing-sm);
+      }
+
+      .comparaciones-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparacion-slider {
+        height: 300px;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -1257,12 +1856,13 @@
       </button>
       <ul class="nav__menu" id="navMenu">
         <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#estadisticas-vivas" class="nav__link">Estadísticas</a></li>
         <li><a href="#contexto" class="nav__link">Contexto</a></li>
         <li><a href="#mapa-interactivo" class="nav__link">Mapa</a></li>
-        <li><a href="#problematicas" class="nav__link">Problemáticas</a></li>
+        <li><a href="#voces-cauca" class="nav__link">Historias</a></li>
+        <li><a href="#comparador-cauca" class="nav__link">Comparación</a></li>
         <li><a href="#propuesta" class="nav__link">Propuesta</a></li>
         <li><a href="#calculadora-impacto" class="nav__link">Calculadora</a></li>
-        <li><a href="#aliados" class="nav__link">Aliados</a></li>
       </ul>
     </nav>
   </header>
@@ -1278,9 +1878,53 @@
           <span class="hero__stat-number">+45%</span>
           <p class="hero__stat-text">de la población vive en condiciones de pobreza multidimensional. Es momento de actuar.</p>
         </div>
-        
+
   </section>
-  
+
+  <!-- ==================== ESTADÍSTICAS VIVAS SECTION ==================== -->
+  <section id="estadisticas-vivas" class="section estadisticas-vivas">
+    <div class="container">
+      <h2 class="fade-in">El Cauca en Números: Lo Que Pasa Cada Día</h2>
+      <p class="estadisticas-subtitle fade-in">Estadísticas que no podemos ignorar</p>
+
+      <div class="estadisticas-grid fade-in">
+        <div class="estadistica-card">
+          <i class="fas fa-child estadistica-icon" style="color: #ef4444;"></i>
+          <div class="estadistica-numero" data-target="25">0</div>
+          <div class="estadistica-unidad">niños/día</div>
+          <div class="estadistica-calculo">≈ 750 al mes | 9,000 al año</div>
+          <p class="estadistica-texto">Abandonan sus estudios por falta de acceso o necesidad económica</p>
+        </div>
+
+        <div class="estadistica-card">
+          <i class="fas fa-tint estadistica-icon" style="color: #3b82f6;"></i>
+          <div class="estadistica-numero" data-target="180000">0</div>
+          <div class="estadistica-unidad">familias</div>
+          <div class="estadistica-calculo">Más de 700,000 personas sin agua tratada</div>
+          <p class="estadistica-texto">Consumen agua sin tratamiento de ríos y quebradas</p>
+        </div>
+
+        <div class="estadistica-card">
+          <i class="fas fa-road estadistica-icon" style="color: #6b7280;"></i>
+          <div class="estadistica-numero" data-target="1200">0</div>
+          <div class="estadistica-unidad">kilómetros</div>
+          <div class="estadistica-calculo">88% de la red vial terciaria</div>
+          <p class="estadistica-texto">Si las pusiéramos en línea llegarían hasta Panamá</p>
+        </div>
+
+        <div class="estadistica-card">
+          <i class="fas fa-wifi estadistica-icon" style="color: #8b5cf6;"></i>
+          <div class="estadistica-numero" data-target="975000">0</div>
+          <div class="estadistica-unidad">personas</div>
+          <div class="estadistica-calculo">65% de la población del Cauca</div>
+          <p class="estadistica-texto">Excluidas de oportunidades educativas y económicas digitales</p>
+        </div>
+      </div>
+
+      <p class="estadisticas-mensaje fade-in">Estos números crecen cada día. Es hora de actuar.</p>
+    </div>
+  </section>
+
   <!-- ==================== CONTEXTO SECTION ==================== -->
   <section id="contexto" class="section section--alt">
     <div class="container">
@@ -1308,6 +1952,73 @@
           <i class="fas fa-hands-helping contexto__icon"></i>
           <h3 class="contexto__title">Diversidad</h3>
           <p class="contexto__text">Comunidades indígenas, afrodescendientes y campesinas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LÍNEA DE TIEMPO SECTION ==================== -->
+  <section id="linea-tiempo" class="section linea-tiempo">
+    <div class="container">
+      <h2 class="fade-in">Historia del Cauca: De Dónde Venimos</h2>
+      <p class="timeline-subtitle fade-in">Eventos que moldearon la realidad actual del departamento</p>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-events">
+          <div class="timeline-event" data-year="1536">
+            <div class="timeline-point" style="border-color: #f59e0b;"></div>
+            <div class="timeline-year">1536</div>
+            <div class="timeline-card">
+              <i class="fas fa-landmark timeline-card-icon" style="color: #f59e0b;"></i>
+              <p class="timeline-card-text">Popayán se convierte en centro colonial importante del suroccidente</p>
+            </div>
+          </div>
+
+          <div class="timeline-event" data-year="1810-1819">
+            <div class="timeline-point" style="border-color: #eab308;"></div>
+            <div class="timeline-year">1810-1819</div>
+            <div class="timeline-card">
+              <i class="fas fa-flag timeline-card-icon" style="color: #eab308;"></i>
+              <p class="timeline-card-text">El Cauca juega papel clave en las guerras de independencia</p>
+            </div>
+          </div>
+
+          <div class="timeline-event" data-year="1970-1990">
+            <div class="timeline-point" style="border-color: #ef4444;"></div>
+            <div class="timeline-year">1970-1990</div>
+            <div class="timeline-card">
+              <i class="fas fa-exclamation-triangle timeline-card-icon" style="color: #ef4444;"></i>
+              <p class="timeline-card-text">Intensificación del conflicto armado en zonas rurales del Cauca</p>
+            </div>
+          </div>
+
+          <div class="timeline-event" data-year="1991">
+            <div class="timeline-point" style="border-color: #10b981;"></div>
+            <div class="timeline-year">1991</div>
+            <div class="timeline-card">
+              <i class="fas fa-book timeline-card-icon" style="color: #10b981;"></i>
+              <p class="timeline-card-text">Reconocimiento constitucional de la diversidad étnica y cultural</p>
+            </div>
+          </div>
+
+          <div class="timeline-event" data-year="2000-2010">
+            <div class="timeline-point" style="border-color: #f97316;"></div>
+            <div class="timeline-year">2000-2010</div>
+            <div class="timeline-card">
+              <i class="fas fa-people-arrows timeline-card-icon" style="color: #f97316;"></i>
+              <p class="timeline-card-text">Miles de familias desplazadas por violencia y presión territorial</p>
+            </div>
+          </div>
+
+          <div class="timeline-event" data-year="2016-HOY">
+            <div class="timeline-point" style="border-color: #3b82f6;"></div>
+            <div class="timeline-year">2016-HOY</div>
+            <div class="timeline-card">
+              <i class="fas fa-dove timeline-card-icon" style="color: #3b82f6;"></i>
+              <p class="timeline-card-text">Acuerdo de paz y desafíos de implementación en territorios rurales</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1414,7 +2125,89 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- ==================== VOCES DEL CAUCA SECTION ==================== -->
+  <section id="voces-cauca" class="section voces-cauca">
+    <div class="container">
+      <h2 class="fade-in">Voces del Cauca: Detrás de las Estadísticas</h2>
+      <p class="voces-subtitle fade-in">Historias reales de personas que enfrentan estos desafíos cada día</p>
+
+      <div class="voces-grid">
+        <!-- MARÍA - LA ESTUDIANTE -->
+        <div class="voz-card">
+          <div class="voz-card-inner">
+            <div class="voz-card-front">
+              <div class="voz-avatar" style="background-color: #ec4899;">M</div>
+              <h3 class="voz-nombre">María</h3>
+              <p class="voz-edad">14 años</p>
+              <p class="voz-rol">Estudiante rural</p>
+              <i class="fas fa-school voz-icono"></i>
+              <p class="instruccion">Haz clic para conocer su historia</p>
+            </div>
+            <div class="voz-card-back">
+              <p class="voz-historia">"Me levanto a las 4 AM para caminar 2 horas hasta mi escuela. Cuando llueve, el camino se vuelve peligroso y debo faltar. Mi sueño es ser profesora, pero no sé si podré terminar el bachillerato."</p>
+              <span class="voz-tag">#DeserciónEscolar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DON PEDRO - EL CAFICULTOR -->
+        <div class="voz-card">
+          <div class="voz-card-inner">
+            <div class="voz-card-front">
+              <div class="voz-avatar" style="background-color: #10b981;">P</div>
+              <h3 class="voz-nombre">Don Pedro</h3>
+              <p class="voz-edad">58 años</p>
+              <p class="voz-rol">Caficultor</p>
+              <i class="fas fa-coffee voz-icono"></i>
+              <p class="instruccion">Haz clic para conocer su historia</p>
+            </div>
+            <div class="voz-card-back">
+              <p class="voz-historia">"Produzco café de excelente calidad, pero por falta de vías debo vender a intermediarios que me pagan tres veces menos del precio real. No me alcanza para enviar a mis hijos a estudiar."</p>
+              <span class="voz-tag">#FaltaDeInfraestructura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOÑA ROSA - LA MADRE -->
+        <div class="voz-card">
+          <div class="voz-card-inner">
+            <div class="voz-card-front">
+              <div class="voz-avatar" style="background-color: #ef4444;">R</div>
+              <h3 class="voz-nombre">Doña Rosa</h3>
+              <p class="voz-edad">45 años</p>
+              <p class="voz-rol">Madre y líder comunitaria</p>
+              <i class="fas fa-heart voz-icono"></i>
+              <p class="instruccion">Haz clic para conocer su historia</p>
+            </div>
+            <div class="voz-card-back">
+              <p class="voz-historia">"Mi hijo enfermó gravemente hace un año. El hospital más cercano estaba a 3 horas en lancha. No llegamos a tiempo. Ahora trabajo para que ninguna otra madre pase por esto."</p>
+              <span class="voz-tag">#AccesoASalud</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LUIS - EL JOVEN MIGRANTE -->
+        <div class="voz-card">
+          <div class="voz-card-inner">
+            <div class="voz-card-front">
+              <div class="voz-avatar" style="background-color: #3b82f6;">L</div>
+              <h3 class="voz-nombre">Luis</h3>
+              <p class="voz-edad">22 años</p>
+              <p class="voz-rol">Joven desplazado económico</p>
+              <i class="fas fa-suitcase voz-icono"></i>
+              <p class="instruccion">Haz clic para conocer su historia</p>
+            </div>
+            <div class="voz-card-back">
+              <p class="voz-historia">"Soñaba con trabajar la tierra de mi familia, pero no había oportunidades ni apoyo. Tuve que migrar a Cali. Trabajo en construcción, pero extraño mi tierra y mi comunidad todos los días."</p>
+              <span class="voz-tag">#ÉxodoRural</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== DESAFÍOS SECTION ==================== -->
   <section id="desafios" class="section section--alt">
     <div class="container">
@@ -1446,7 +2239,127 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- ==================== COMPARADOR CAUCA VS COLOMBIA SECTION ==================== -->
+  <section id="comparador-cauca" class="section comparador-cauca">
+    <div class="container">
+      <h2 class="fade-in">Cauca vs Colombia: La Brecha Social</h2>
+      <p class="comparador-subtitle fade-in">Comparación de indicadores clave con el promedio nacional</p>
+
+      <div class="comparaciones-container">
+        <!-- 1. POBREZA MULTIDIMENSIONAL -->
+        <div class="comparacion-item fade-in">
+          <div class="comparacion-header">
+            <i class="fas fa-chart-line comparacion-icon"></i>
+            <h3 class="comparacion-titulo">Pobreza Multidimensional</h3>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-cauca">Cauca</span>
+              <span class="barra-label-cauca">45.7%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-cauca" data-width="45.7"></div>
+            </div>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-colombia">Colombia</span>
+              <span class="barra-label-colombia">16.4%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-colombia" data-width="16.4"></div>
+            </div>
+          </div>
+          <p class="comparacion-nota">2.8 veces mayor que el promedio nacional</p>
+        </div>
+
+        <!-- 2. COBERTURA EDUCATIVA SECUNDARIA -->
+        <div class="comparacion-item fade-in">
+          <div class="comparacion-header">
+            <i class="fas fa-graduation-cap comparacion-icon"></i>
+            <h3 class="comparacion-titulo">Cobertura Educativa Secundaria</h3>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-cauca">Cauca</span>
+              <span class="barra-label-cauca">78.3%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-cauca" data-width="78.3"></div>
+            </div>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-colombia">Colombia</span>
+              <span class="barra-label-colombia">89.1%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-colombia" data-width="89.1"></div>
+            </div>
+          </div>
+          <p class="comparacion-nota">11 puntos por debajo del promedio</p>
+        </div>
+
+        <!-- 3. ACCESO A INTERNET -->
+        <div class="comparacion-item fade-in">
+          <div class="comparacion-header">
+            <i class="fas fa-wifi comparacion-icon"></i>
+            <h3 class="comparacion-titulo">Acceso a Internet</h3>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-cauca">Cauca</span>
+              <span class="barra-label-cauca">35.2%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-cauca" data-width="35.2"></div>
+            </div>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-colombia">Colombia</span>
+              <span class="barra-label-colombia">63.8%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-colombia" data-width="63.8"></div>
+            </div>
+          </div>
+          <p class="comparacion-nota">Casi la mitad sin conectividad</p>
+        </div>
+
+        <!-- 4. VÍAS PAVIMENTADAS -->
+        <div class="comparacion-item fade-in">
+          <div class="comparacion-header">
+            <i class="fas fa-road comparacion-icon"></i>
+            <h3 class="comparacion-titulo">Vías Pavimentadas (Red Terciaria)</h3>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-cauca">Cauca</span>
+              <span class="barra-label-cauca">12.1%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-cauca" data-width="12.1"></div>
+            </div>
+          </div>
+          <div class="barra-container">
+            <div class="barra-label">
+              <span class="barra-label-colombia">Colombia</span>
+              <span class="barra-label-colombia">28.3%</span>
+            </div>
+            <div class="barra-wrapper">
+              <div class="barra barra-colombia" data-width="28.3"></div>
+            </div>
+          </div>
+          <p class="comparacion-nota">88% de vías sin pavimentar</p>
+        </div>
+      </div>
+
+      <p class="comparador-mensaje fade-in">Estas brechas no son casuales. Son el resultado de décadas de inversión insuficiente y desigual.</p>
+    </div>
+  </section>
+
   <!-- ==================== PROPUESTA SECTION ==================== -->
   <section id="propuesta" class="section propuesta">
     <div class="container">
@@ -1493,6 +2406,88 @@
             <p class="indicador__texto">Comunidades beneficiadas directamente</p>
           </div>
         </div>
+      </div>
+
+      <!-- ANTES Y DESPUÉS DENTRO DE PROPUESTA -->
+      <div class="antes-despues-container" style="margin-top: var(--spacing-xl);">
+        <h3 style="text-align: center; color: white; margin-bottom: var(--spacing-md); font-size: 2rem;">Visualiza el Cambio: Cauca 2025 vs Cauca 2030</h3>
+        <p style="text-align: center; color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-lg); font-size: 1.1rem;">Así se vería la transformación con nuestra propuesta implementada</p>
+
+        <div class="comparaciones-grid">
+          <!-- 1. ESCUELA RURAL -->
+          <div class="comparacion-slider">
+            <span class="comparacion-label label-antes">ANTES</span>
+            <span class="comparacion-label label-despues">DESPUÉS</span>
+            <div class="comparacion-content">
+              <div class="comparacion-antes">
+                <i class="fas fa-frown comparacion-icono" style="color: #dc2626;"></i>
+                <h4 class="comparacion-titulo">Escuela Rural</h4>
+                <p class="comparacion-descripcion">Infraestructura educativa precaria, paredes agrietadas, sin ventanas, pupitres rotos</p>
+              </div>
+              <div class="comparacion-despues">
+                <i class="fas fa-smile comparacion-icono" style="color: #059669;"></i>
+                <h4 class="comparacion-titulo">Escuela Rural</h4>
+                <p class="comparacion-descripcion">Infraestructura digna con tecnología, aulas iluminadas, biblioteca y comedor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. VÍA RURAL -->
+          <div class="comparacion-slider">
+            <span class="comparacion-label label-antes">ANTES</span>
+            <span class="comparacion-label label-despues">DESPUÉS</span>
+            <div class="comparacion-content">
+              <div class="comparacion-antes">
+                <i class="fas fa-times-circle comparacion-icono" style="color: #dc2626;"></i>
+                <h4 class="comparacion-titulo">Vía Rural</h4>
+                <p class="comparacion-descripcion">Vía destapada con huecos, sin señalización, intransitable en invierno. Aislamiento total</p>
+              </div>
+              <div class="comparacion-despues">
+                <i class="fas fa-check-circle comparacion-icono" style="color: #059669;"></i>
+                <h4 class="comparacion-titulo">Vía Rural</h4>
+                <p class="comparacion-descripcion">Vía pavimentada, señalizada, con puentes seguros. Conectividad y acceso a mercados</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. FAMILIA CAMPESINA (conectividad) -->
+          <div class="comparacion-slider">
+            <span class="comparacion-label label-antes">ANTES</span>
+            <span class="comparacion-label label-despues">DESPUÉS</span>
+            <div class="comparacion-content">
+              <div class="comparacion-antes">
+                <i class="fas fa-ban comparacion-icono" style="color: #dc2626;"></i>
+                <h4 class="comparacion-titulo">Conectividad</h4>
+                <p class="comparacion-descripcion">Familia sin internet, sin teléfono, aislada digitalmente. Sin acceso a información</p>
+              </div>
+              <div class="comparacion-despues">
+                <i class="fas fa-signal comparacion-icono" style="color: #059669;"></i>
+                <h4 class="comparacion-titulo">Conectividad</h4>
+                <p class="comparacion-descripcion">Internet, educación virtual, consulta de precios. Conectados al mundo digital</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. MERCADO LOCAL (economía) -->
+          <div class="comparacion-slider">
+            <span class="comparacion-label label-antes">ANTES</span>
+            <span class="comparacion-label label-despues">DESPUÉS</span>
+            <div class="comparacion-content">
+              <div class="comparacion-antes">
+                <i class="fas fa-hand-holding-usd comparacion-icono" style="color: #dc2626;"></i>
+                <h4 class="comparacion-titulo">Economía Local</h4>
+                <p class="comparacion-descripcion">Venta a intermediarios $500/kg. Explotación y pobreza rural persistente</p>
+              </div>
+              <div class="comparacion-despues">
+                <i class="fas fa-coins comparacion-icono" style="color: #059669;"></i>
+                <h4 class="comparacion-titulo">Economía Local</h4>
+                <p class="comparacion-descripcion">Comercialización directa $1,500/kg. Comercio justo y dignidad para las familias</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="antes-despues-mensaje">Este es el Cauca que queremos construir. No es un sueño inalcanzable, es una meta con acciones concretas.</p>
       </div>
     </div>
   </section>
@@ -1693,22 +2688,28 @@
             <a href="#inicio">Inicio</a>
           </div>
           <div class="footer__contact-item">
+            <a href="#estadisticas-vivas">Estadísticas Vivas</a>
+          </div>
+          <div class="footer__contact-item">
             <a href="#contexto">Contexto</a>
+          </div>
+          <div class="footer__contact-item">
+            <a href="#linea-tiempo">Historia del Cauca</a>
           </div>
           <div class="footer__contact-item">
             <a href="#mapa-interactivo">Mapa Interactivo</a>
           </div>
           <div class="footer__contact-item">
-            <a href="#problematicas">Problemáticas</a>
+            <a href="#voces-cauca">Voces del Cauca</a>
+          </div>
+          <div class="footer__contact-item">
+            <a href="#comparador-cauca">Comparador Cauca</a>
           </div>
           <div class="footer__contact-item">
             <a href="#propuesta">Propuesta</a>
           </div>
           <div class="footer__contact-item">
             <a href="#calculadora-impacto">Calculadora de Impacto</a>
-          </div>
-          <div class="footer__contact-item">
-            <a href="#aliados">Aliados</a>
           </div>
         </div>
       </div>
@@ -2002,6 +3003,98 @@
 
     // Calcular impactos iniciales al cargar
     calcularImpactos();
+
+    // ==================== ESTADÍSTICAS VIVAS - COUNTUP ====================
+
+    function animateCounter(element, target, duration = 2000) {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current).toLocaleString('es-CO');
+      }, 16);
+    }
+
+    // Intersection Observer para estadísticas
+    const estadisticasObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          entry.target.classList.add('animated');
+          const cards = entry.target.querySelectorAll('.estadistica-numero');
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              const target = parseInt(card.getAttribute('data-target'));
+              animateCounter(card, target);
+            }, index * 200);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const estadisticasSection = document.querySelector('#estadisticas-vivas .estadisticas-grid');
+    if (estadisticasSection) {
+      estadisticasObserver.observe(estadisticasSection);
+    }
+
+    // ==================== COMPARADOR - BARRAS ANIMADAS ====================
+
+    const comparadorObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          entry.target.classList.add('animated');
+          const barras = entry.target.querySelectorAll('.barra');
+          barras.forEach((barra, index) => {
+            setTimeout(() => {
+              const width = barra.getAttribute('data-width');
+              barra.style.width = width + '%';
+              barra.classList.add('animated');
+              // Mostrar el porcentaje dentro de la barra
+              barra.textContent = width + '%';
+            }, index * 300);
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.comparacion-item').forEach(item => {
+      comparadorObserver.observe(item);
+    });
+
+    // ==================== VOCES DEL CAUCA - FLIP CARDS ====================
+
+    document.querySelectorAll('.voz-card').forEach(card => {
+      card.addEventListener('click', function() {
+        this.classList.toggle('flipped');
+      });
+    });
+
+    // ==================== LÍNEA DE TIEMPO ====================
+
+    document.querySelectorAll('.timeline-event').forEach(event => {
+      event.addEventListener('click', function() {
+        // Remover clase active de todos
+        document.querySelectorAll('.timeline-event').forEach(e => {
+          e.classList.remove('active');
+        });
+        // Agregar clase active al clickeado
+        this.classList.add('active');
+      });
+    });
+
+    // Cerrar tarjeta al hacer clic fuera
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.timeline-event')) {
+        document.querySelectorAll('.timeline-event').forEach(event => {
+          event.classList.remove('active');
+        });
+      }
+    });
   </script>
 
 
