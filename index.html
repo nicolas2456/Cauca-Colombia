@@ -879,6 +879,264 @@
       line-height: 1.6;
     }
 
+    /* ==================== CALCULADORA DE IMPACTO ==================== */
+    .calculadora-impacto {
+      background-color: var(--color-background-alt);
+    }
+
+    .calculadora-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .calculadora-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-md);
+    }
+
+    /* Columna de controles */
+    .calculadora-controles {
+      background-color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+    }
+
+    .control-group {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .control-group label {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-xs);
+      font-size: 1.05rem;
+    }
+
+    .control-group label i {
+      font-size: 1.25rem;
+      color: var(--color-primary);
+    }
+
+    /* Estilos para sliders */
+    .slider-container {
+      margin: var(--spacing-sm) 0;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: linear-gradient(to right, var(--color-border) 0%, var(--color-border) 100%);
+      outline: none;
+      -webkit-appearance: none;
+      margin: var(--spacing-xs) 0;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+      box-shadow: var(--shadow-md);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      cursor: pointer;
+      border: none;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    input[type="range"]::-moz-range-thumb:hover {
+      transform: scale(1.2);
+      box-shadow: var(--shadow-md);
+    }
+
+    input[type="range"]#educacion::-webkit-slider-thumb {
+      background: var(--color-primary);
+    }
+
+    input[type="range"]#infraestructura::-webkit-slider-thumb {
+      background: var(--color-secondary);
+    }
+
+    input[type="range"]#desarrollo::-webkit-slider-thumb {
+      background: var(--color-accent);
+    }
+
+    input[type="range"]#educacion::-moz-range-thumb {
+      background: var(--color-primary);
+    }
+
+    input[type="range"]#infraestructura::-moz-range-thumb {
+      background: var(--color-secondary);
+    }
+
+    input[type="range"]#desarrollo::-moz-range-thumb {
+      background: var(--color-accent);
+    }
+
+    .valor-actual {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: var(--spacing-xs);
+    }
+
+    .slider-minmax {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: 4px;
+    }
+
+    /* Inversión total */
+    .inversion-total {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #f97316 100%);
+      color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      text-align: center;
+      margin: var(--spacing-md) 0;
+    }
+
+    .inversion-total i {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-xs);
+      display: block;
+    }
+
+    .inversion-total span {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: var(--spacing-xs);
+      opacity: 0.9;
+    }
+
+    .inversion-total h3 {
+      font-size: 2rem;
+      color: white;
+      margin: 0;
+      font-family: var(--font-heading);
+    }
+
+    .btn-reset {
+      width: 100%;
+      margin-top: var(--spacing-sm);
+    }
+
+    /* Columna de resultados */
+    .calculadora-resultados {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-md);
+    }
+
+    .resultado-card {
+      background-color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .resultado-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .resultado-card i {
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .resultado-card:nth-child(1) i {
+      color: var(--color-primary);
+    }
+
+    .resultado-card:nth-child(2) i {
+      color: var(--color-secondary);
+    }
+
+    .resultado-card:nth-child(3) i {
+      color: var(--color-accent);
+    }
+
+    .resultado-card:nth-child(4) i {
+      color: #8b5cf6;
+    }
+
+    .resultado-card .numero {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--color-text);
+      margin: var(--spacing-xs) 0;
+      font-family: var(--font-heading);
+      transition: all 0.5s ease;
+    }
+
+    .resultado-card .label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .resultado-card .explicacion {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Mensaje motivacional */
+    .mensaje-motivacional {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+      color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .mensaje-motivacional i {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-xs);
+      display: block;
+    }
+
+    .mensaje-motivacional p {
+      color: white;
+      font-size: 1.1rem;
+      margin: 0;
+      font-weight: 500;
+    }
+
     /* ==================== RESPONSIVE ==================== */
     @media (max-width: 768px) {
       html {
@@ -963,6 +1221,18 @@
       .region-label {
         font-size: 11px;
       }
+
+      .calculadora-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .calculadora-resultados {
+        grid-template-columns: 1fr;
+      }
+
+      .resultado-card .numero {
+        font-size: 2rem;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -991,6 +1261,7 @@
         <li><a href="#mapa-interactivo" class="nav__link">Mapa</a></li>
         <li><a href="#problematicas" class="nav__link">Problemáticas</a></li>
         <li><a href="#propuesta" class="nav__link">Propuesta</a></li>
+        <li><a href="#calculadora-impacto" class="nav__link">Calculadora</a></li>
         <li><a href="#aliados" class="nav__link">Aliados</a></li>
       </ul>
     </nav>
@@ -1225,7 +1496,132 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- ==================== CALCULADORA DE IMPACTO SECTION ==================== -->
+  <section id="calculadora-impacto" class="section section--alt calculadora-impacto">
+    <div class="container">
+      <h2 class="fade-in">Calculadora de Impacto Social</h2>
+      <p class="calculadora-subtitle fade-in">Descubre el impacto real según diferentes niveles de inversión</p>
+
+      <div class="calculadora-grid fade-in">
+        <!-- COLUMNA IZQUIERDA: CONTROLES -->
+        <div class="calculadora-controles">
+          <div class="control-group">
+            <label for="educacion">
+              <i class="fas fa-graduation-cap"></i>
+              Inversión en Educación
+            </label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="educacion"
+                min="0"
+                max="10000000000"
+                step="500000000"
+                value="5000000000"
+                aria-label="Inversión en educación">
+              <div class="slider-minmax">
+                <span>$0</span>
+                <span>$10.000 millones</span>
+              </div>
+            </div>
+            <span class="valor-actual" id="valor-educacion">$5.000.000.000</span>
+          </div>
+
+          <div class="control-group">
+            <label for="infraestructura">
+              <i class="fas fa-road"></i>
+              Inversión en Infraestructura
+            </label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="infraestructura"
+                min="0"
+                max="15000000000"
+                step="1000000000"
+                value="10000000000"
+                aria-label="Inversión en infraestructura">
+              <div class="slider-minmax">
+                <span>$0</span>
+                <span>$15.000 millones</span>
+              </div>
+            </div>
+            <span class="valor-actual" id="valor-infraestructura">$10.000.000.000</span>
+          </div>
+
+          <div class="control-group">
+            <label for="desarrollo">
+              <i class="fas fa-seedling"></i>
+              Inversión en Desarrollo Productivo
+            </label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="desarrollo"
+                min="0"
+                max="12000000000"
+                step="500000000"
+                value="8000000000"
+                aria-label="Inversión en desarrollo productivo">
+              <div class="slider-minmax">
+                <span>$0</span>
+                <span>$12.000 millones</span>
+              </div>
+            </div>
+            <span class="valor-actual" id="valor-desarrollo">$8.000.000.000</span>
+          </div>
+
+          <div class="inversion-total">
+            <i class="fas fa-calculator"></i>
+            <span>Inversión Total</span>
+            <h3 id="inversion-total-valor">$23.000.000.000</h3>
+          </div>
+
+          <button class="btn btn--secondary btn-reset" id="btn-reset">
+            <i class="fas fa-redo"></i> Resetear valores
+          </button>
+        </div>
+
+        <!-- COLUMNA DERECHA: RESULTADOS -->
+        <div class="calculadora-resultados">
+          <div class="resultado-card">
+            <i class="fas fa-user-graduate"></i>
+            <h3 class="numero" id="resultado-estudiantes">2,500</h3>
+            <p class="label">Estudiantes beneficiados</p>
+            <p class="explicacion">Con alimentación escolar, útiles y transporte incluidos</p>
+          </div>
+
+          <div class="resultado-card">
+            <i class="fas fa-road"></i>
+            <h3 class="numero" id="resultado-kilometros">80</h3>
+            <p class="label">Kilómetros de vía mejorados</p>
+            <p class="explicacion">Vías terciarias pavimentadas con señalización</p>
+          </div>
+
+          <div class="resultado-card">
+            <i class="fas fa-users"></i>
+            <h3 class="numero" id="resultado-familias">400</h3>
+            <p class="label">Familias con empleo generado</p>
+            <p class="explicacion">Unidades productivas familiares fortalecidas</p>
+          </div>
+
+          <div class="resultado-card">
+            <i class="fas fa-home"></i>
+            <h3 class="numero" id="resultado-comunidades">69</h3>
+            <p class="label">Comunidades impactadas</p>
+            <p class="explicacion">Veredas y resguardos con intervención integral</p>
+          </div>
+
+          <div class="mensaje-motivacional">
+            <i class="fas fa-heart"></i>
+            <p id="mensaje-texto">Esta inversión permite un impacto significativo en múltiples regiones del Cauca</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== ALIADOS SECTION ==================== -->
   <section id="aliados" class="section">
     <div class="container">
@@ -1307,6 +1703,9 @@
           </div>
           <div class="footer__contact-item">
             <a href="#propuesta">Propuesta</a>
+          </div>
+          <div class="footer__contact-item">
+            <a href="#calculadora-impacto">Calculadora de Impacto</a>
           </div>
           <div class="footer__contact-item">
             <a href="#aliados">Aliados</a>
@@ -1500,6 +1899,109 @@
         this.style.cursor = 'pointer';
       });
     });
+
+    // ==================== CALCULADORA DE IMPACTO ====================
+
+    // Obtener elementos
+    const sliderEducacion = document.getElementById('educacion');
+    const sliderInfraestructura = document.getElementById('infraestructura');
+    const sliderDesarrollo = document.getElementById('desarrollo');
+
+    const valorEducacion = document.getElementById('valor-educacion');
+    const valorInfraestructura = document.getElementById('valor-infraestructura');
+    const valorDesarrollo = document.getElementById('valor-desarrollo');
+    const inversionTotal = document.getElementById('inversion-total-valor');
+
+    const resultadoEstudiantes = document.getElementById('resultado-estudiantes');
+    const resultadoKilometros = document.getElementById('resultado-kilometros');
+    const resultadoFamilias = document.getElementById('resultado-familias');
+    const resultadoComunidades = document.getElementById('resultado-comunidades');
+    const mensajeTexto = document.getElementById('mensaje-texto');
+
+    const btnReset = document.getElementById('btn-reset');
+
+    // Valores iniciales
+    const valoresIniciales = {
+      educacion: 5000000000,
+      infraestructura: 10000000000,
+      desarrollo: 8000000000
+    };
+
+    // Función para formatear números en pesos colombianos
+    function formatearPesos(valor) {
+      return '$' + Math.round(valor).toLocaleString('es-CO');
+    }
+
+    // Función para formatear números con separador de miles
+    function formatearNumero(valor) {
+      return Math.round(valor).toLocaleString('es-CO');
+    }
+
+    // Función para calcular impactos
+    function calcularImpactos() {
+      const educacion = parseFloat(sliderEducacion.value);
+      const infraestructura = parseFloat(sliderInfraestructura.value);
+      const desarrollo = parseFloat(sliderDesarrollo.value);
+
+      // Actualizar valores mostrados
+      valorEducacion.textContent = formatearPesos(educacion);
+      valorInfraestructura.textContent = formatearPesos(infraestructura);
+      valorDesarrollo.textContent = formatearPesos(desarrollo);
+
+      // Calcular inversión total
+      const total = educacion + infraestructura + desarrollo;
+      inversionTotal.textContent = formatearPesos(total);
+
+      // CÁLCULOS BASADOS EN FÓRMULAS REALES
+
+      // A) Estudiantes beneficiados
+      // Costo promedio por estudiante/año en Colombia rural = $2,000,000 COP
+      const estudiantes = educacion / 2000000;
+      resultadoEstudiantes.textContent = formatearNumero(estudiantes);
+
+      // B) Kilómetros de vía mejorados
+      // Costo promedio pavimentación vía terciaria = $125,000,000 COP/km
+      const kilometros = infraestructura / 125000000;
+      resultadoKilometros.textContent = formatearNumero(kilometros);
+
+      // C) Familias con empleo generado
+      // Inversión promedio por unidad productiva familiar = $20,000,000 COP
+      const familias = desarrollo / 20000000;
+      resultadoFamilias.textContent = formatearNumero(familias);
+
+      // D) Comunidades impactadas
+      // Se necesitan aprox $400 millones para impactar significativamente una comunidad
+      // Factor 1.2 considera economías de escala
+      const comunidades = Math.floor((total / 400000000) * 1.2);
+      resultadoComunidades.textContent = formatearNumero(comunidades);
+
+      // Actualizar mensaje motivacional según inversión total
+      let mensaje = '';
+      if (total < 10000000000) {
+        mensaje = 'Con esta inversión inicial podemos comenzar a generar cambios en comunidades piloto';
+      } else if (total >= 10000000000 && total <= 20000000000) {
+        mensaje = 'Esta inversión permite un impacto significativo en múltiples regiones del Cauca';
+      } else {
+        mensaje = '¡Con esta inversión podemos transformar integralmente el departamento del Cauca!';
+      }
+      mensajeTexto.textContent = mensaje;
+    }
+
+    // Event listeners para los sliders
+    sliderEducacion.addEventListener('input', calcularImpactos);
+    sliderInfraestructura.addEventListener('input', calcularImpactos);
+    sliderDesarrollo.addEventListener('input', calcularImpactos);
+
+    // Función para resetear valores
+    btnReset.addEventListener('click', function() {
+      sliderEducacion.value = valoresIniciales.educacion;
+      sliderInfraestructura.value = valoresIniciales.infraestructura;
+      sliderDesarrollo.value = valoresIniciales.desarrollo;
+      calcularImpactos();
+    });
+
+    // Calcular impactos iniciales al cargar
+    calcularImpactos();
   </script>
 
 
